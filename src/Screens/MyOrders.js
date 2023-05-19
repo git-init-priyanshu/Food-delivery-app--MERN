@@ -35,14 +35,14 @@ export default function MyOrders() {
           {orderData.reverse().map((item) => {
             return item.map((arrData) => {
               return (
-                <div className="col">
+                <>
                   {arrData.Order_date ? (
-                    <div>
-                      <hr />
+                    <div className="col-12 mt-5">
                       {arrData.Order_date}
+                      <hr />
                     </div>
                   ) : (
-                    <div>
+                    <div className=" col-md-6 col-lg-3">
                       <div
                         className="card mt-3"
                         style={{ width: "16rem", maxHeight: "360px" }}
@@ -63,7 +63,7 @@ export default function MyOrders() {
                       </div>
                     </div>
                   )}
-                </div>
+                </>
               );
             });
           })}
